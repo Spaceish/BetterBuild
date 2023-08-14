@@ -64,9 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const author = authorInput.value;
         const description = descriptionTextArea.value;
         const version = versionInput.value;
-        const loadCode = loadCodeEditor.getValue();
-        const startCode = startCodeEditor.getValue();
-        const stopCode = stopCodeEditor.getValue();
+        const loadCode = loadCodeEditor.getDoc().getValue();
+        const startCode = startCodeEditor.getDoc().getValue();
+        const stopCode = stopCodeEditor.getDoc().getValue();
 
         // Create an object to hold the plugin data
         const pluginData = {
@@ -96,9 +96,9 @@ document.addEventListener("DOMContentLoaded", function () {
             descriptionTextArea.value = pluginData.description || "";
             versionInput.value = pluginData.version || "";
             // Set values in CodeMirror editors
-            loadCodeEditor.setValue(pluginData.load_code || "");
-            startCodeEditor.setValue(pluginData.start_code || "");
-            stopCodeEditor.setValue(pluginData.stop_code || "");
+            loadCodeEditor.getDoc().setValue(pluginData.load_code || "");
+            startCodeEditor.getDoc().setValue(pluginData.start_code || "");
+            stopCodeEditor.getDoc().setValue(pluginData.stop_code || "");
 
             alert("Plugin configuration loaded successfully!");
         } else {
@@ -112,9 +112,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const author = authorInput.value;
         const description = descriptionTextArea.value;
         const version = versionInput.value;
-        const loadCode = loadCodeTextArea.value;
-        const startCode = startCodeTextArea.value;
-        const stopCode = stopCodeTextArea.value;
+        const loadCode = loadCodeEditor.getDoc().getValue();
+        const startCode = startCodeEditor.getDoc().getValue();
+        const stopCode = stopCodeEditor.getDoc().getValue();
 
         // Generate plugin code
         const pluginCode = `
