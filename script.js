@@ -4,10 +4,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const descriptionTextArea = document.getElementById("description");
     const versionInput = document.getElementById("version");
 
-    const loadCodeTextArea = document.getElementById("loadTextArea");
-    const startCodeTextArea = document.getElementById("startTextArea");
-    const stopCodeTextArea = document.getElementById("stopTextArea");
-
     const loadTab = document.getElementById("loadTab");
     const startTab = document.getElementById("startTab");
     const stopTab = document.getElementById("stopTab");
@@ -68,9 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const author = authorInput.value;
         const description = descriptionTextArea.value;
         const version = versionInput.value;
-        const loadCode = loadCodeTextArea.value;
-        const startCode = startCodeTextArea.value;
-        const stopCode = stopCodeTextArea.value;
+        const loadCode = loadCodeEditor.getValue();
+        const startCode = startCodeEditor.getValue();
+        const stopCode = stopCodeEditor.getValue();
 
         // Create an object to hold the plugin data
         const pluginData = {
@@ -99,9 +95,10 @@ document.addEventListener("DOMContentLoaded", function () {
             authorInput.value = pluginData.author || "";
             descriptionTextArea.value = pluginData.description || "";
             versionInput.value = pluginData.version || "";
-            loadCodeTextArea.value = pluginData.load_code || "";
-            startCodeTextArea.value = pluginData.start_code || "";
-            stopCodeTextArea.value = pluginData.stop_code || "";
+            // Set values in CodeMirror editors
+            loadCodeEditor.setValue(pluginData.load_code || "");
+            startCodeEditor.setValue(pluginData.start_code || "");
+            stopCodeEditor.setValue(pluginData.stop_code || "");
 
             alert("Plugin configuration loaded successfully!");
         } else {
