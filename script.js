@@ -4,6 +4,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const descriptionTextArea = document.getElementById("description");
     const versionInput = document.getElementById("version");
 
+    const loadTextArea = document.getElementById("loadTextArea");
+    const startTextArea = document.getElementById("startTextArea");
+    const stopTextArea = document.getElementById("stopTextArea");
+
     const loadTab = document.getElementById("loadTab");
     const startTab = document.getElementById("startTab");
     const stopTab = document.getElementById("stopTab");
