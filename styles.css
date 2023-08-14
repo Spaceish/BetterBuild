@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #36393F;
+    color: white;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #202225;
+}
+
+    .sidebar h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .sidebar label, .sidebar textarea, .sidebar input {
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
+        padding: 8px;
+        border: none;
+        background-color: #36393F;
+        color: white;
+        border-radius: 4px;
+    }
+
+    .sidebar textarea {
+        height: 100px;
+    }
+
+    .sidebar button {
+        display: block;
+        margin-top: 10px;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        background-color: #7289DA;
+        color: white;
+        font-weight: bold;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+        .sidebar button:hover {
+            background-color: #5D6B82;
+        }
+
+.editor {
+    flex: 3;
+    padding: 20px;
+    background-color: #2C2F33;
+}
+
+.tabs {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #7289DA;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px 4px 0 0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+    .tab:hover {
+        background-color: #5D6B82;
+    }
+
+.code-editor {
+    display: none;
+    height: 200px;
+    padding: 10px;
+    background-color: #36393F;
+    color: white;
+    border-radius: 0 0 4px 4px;
+    overflow: auto;
+}
+
+#generateButton {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background-color: #7289DA;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+    #generateButton:hover {
+        background-color: #5D6B82;
+    }
