@@ -37,6 +37,12 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    // Apply Comic Sans font and hot pink color to the CodeMirror editors
+    document.querySelectorAll('.CodeMirror').forEach(editor => {
+        editor.style.fontFamily = 'Comic Sans MS, sans-serif';
+        editor.style.color = 'hotpink';
+    });
+
     loadTab.addEventListener('click', function () {
         setActiveTab(loadTab);
         setActiveEditor(loadCodeEditor);
